@@ -66,6 +66,7 @@ const view = reactive({
 const state = reactive({ ...useView(view), ...toRefs(view) });
 
 const addKey = ref(0);
+// 新增/修改
 const addOrUpdateRef = ref();
 const addOrUpdateHandle = (id?: number) => {
   addKey.value++;
@@ -83,8 +84,6 @@ const selectPrincipal = () => {
 };
 
 const checkedPrincipal = (userList: any) => {
-  console.log(2);
-
   state.principalVisiable = false;
   nextTick(() => {
     addOrUpdateRef.value.getUserId(userList);

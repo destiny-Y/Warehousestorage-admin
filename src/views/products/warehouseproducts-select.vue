@@ -52,8 +52,6 @@ const rules = ref({});
 
 const title = ref();
 const init = (date: any) => {
-  console.log(title);
-
   visible.value = true;
   title.value = date;
   // 重置表单数据
@@ -79,7 +77,6 @@ const handleSelectionChange = (row: any) => {
   } else {
     selectList.value = row;
   }
-  console.log(selectList.value);
 };
 
 const checkedPrincipal = () => {
